@@ -192,7 +192,8 @@
 
 <script>
 const data = [
-  {key:"pencil", art:"✏️", sentence:"I write with a pencil."},
+  {key:"pencil", img:"img/https://www.google.com/imgres?q=pensil&imgurl=https%3A%2F%2Fsiopen.balangankab.go.id%2Fstorage%2Fmerchant%2Fproducts%2F2024%2F05%2F20%2F08b17f5b2d3e1b80fcd499d5ea20a17a.jpg&imgrefurl=https%3A%2F%2Fsiopen.balangankab.go.id%2Fproducts%2Fpensil-1iX1lIJZj3qjmYckNXWWF&docid=VVesoYnQFGRlQM&tbnid=vtO0SouysnIyWM&vet=12ahUKEwiX-5SY3qGRAxVuzzgGHeNGBXIQM3oECB4QAA..i&w=413&h=413&hcb=2&ved=2ahUKEwiX-5SY3qGRAxVuzzgGHeNGBXIQM3oECB4QAA"
+, sentence:"I write with a pencil."},
   {key:"eraser", art:"🩶", sentence:"I erase my mistakes with an eraser."},
   {key:"ruler", art:"📏", sentence:"The ruler measures length."},
   {key:"bag", art:"🎒", sentence:"My bag is on the chair."},
@@ -241,7 +242,7 @@ function startGame(){
 function render(){
   const idx = order[current];
   const item = data[idx];
-  artEl.textContent = item.art;
+  objectDisplay.innerHTML = `<img src="${item.img}" class="object-img">`;
   progressEl.querySelector('strong').textContent = current+1;
   // prepare options
   const choices = [item.key];
